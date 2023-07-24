@@ -21,7 +21,13 @@ public class BancoAcesso {
 			String SQL = "SELECT * FROM PESSOA";
 			ResultSet rs = stmt.executeQuery(SQL);
 			while (rs.next()) {
+				System.out.println("");
+				System.out.println("Codigo: ");
+				System.out.println(rs.getInt("CODIGO"));
+				System.out.println("Nome: ");
 				System.out.println(rs.getString("NOME"));
+				System.out.println("Sexo: ");
+				System.out.println(rs.getString("SEXO"));
 			}
 		rs.close();
 		stmt.close();
